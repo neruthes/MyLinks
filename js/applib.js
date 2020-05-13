@@ -44,7 +44,7 @@ app.DataClass.MyLinksProfileUrl = {
 };
 
 app.DataClass.ProfilePkg = {
-    'Exmaple': `bXlsaW5rczpQcm9maWxlTWFpbjoxCi0tCm5hbWV8TmVydXRoZXMKYXZhdGFyVXJsfGh0dHBzOi8vbmVydXRoZXMueHl6L25lcnV0aGVzLWZvcmNlQ2lyY2xlLXBhZGRlZC5wbmcKc2hvcnROYW1lfG5lcnV0aGVzCi0KMHxuZXJ1dGhlcy54eXoKMHxuZXJ1dGhlcy5jb20`,
+    'Exmaple': `bXlsaW5rczpQcm9maWxlTWFpbjoxCi0tCm5hbWV8TmVydXRoZXMKYXZhdGFyVXJsfGh0dHBzOi8vbmVydXRoZXMueHl6L25lcnV0aGVzLWZvcmNlQ2lyY2xlLXVucGFkZGVkLnBuZwotCjB8bmVydXRoZXMueHl6CjF8aUBuZXJ1dGhlcy54eXoKMnxBRkIzMzczRjUyMDBERjM4CjV8bmVydXRoZXMKNnxuZXJ1dGhlcwo4fG5lcnV0aGVz`,
     'parse': function (str) {
         console.log('str', str);
         return app.DataClass.ProfileMain.parse(app.util.Base64url_decode(str));
@@ -145,6 +145,20 @@ app.DataClass.EntryItem = {
                 n: 'Twitter',
                 text: `@${argv[0]}`,
                 href: `https://twitter.com/${argv[0]}`
+            };
+        },
+        '7': function (argv) { // Facebook
+            return {
+                n: 'Facebook',
+                text: `@${argv[0]}`,
+                href: `https://www.twitter.com/${argv[0]}`
+            };
+        },
+        '8': function (argv) { // Keybase
+            return {
+                n: 'Keybase',
+                text: `@${argv[0]}`,
+                href: `https://keybase.io/${argv[0]}`
             };
         }
     },

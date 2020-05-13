@@ -2,7 +2,7 @@
 
 ## Use
 
-Preview on [mylinks.one](https://mylinks.one/u/?i=bXlsaW5rczpQcm9maWxlTWFpbjoxCi0tCm5hbWV8TmVydXRoZXMKYXZhdGFyVXJsfGh0dHBzOi8vbmVydXRoZXMueHl6L25lcnV0aGVzLWZvcmNlQ2lyY2xlLXVucGFkZGVkLnBuZwotCjB8bmVydXRoZXMueHl6CjF8aUBuZXJ1dGhlcy54eXoKMnxBRkIzMzczRjUyMDBERjM4).
+Preview on [mylinks.one](https://mylinks.one/u/?i=bXlsaW5rczpQcm9maWxlTWFpbjoxCi0tCm5hbWV8TmVydXRoZXMKYXZhdGFyVXJsfGh0dHBzOi8vbmVydXRoZXMueHl6L25lcnV0aGVzLWZvcmNlQ2lyY2xlLXVucGFkZGVkLnBuZwotCjB8bmVydXRoZXMueHl6CjF8aUBuZXJ1dGhlcy54eXoKMnxBRkIzMzczRjUyMDBERjM4CjV8bmVydXRoZXMKNnxuZXJ1dGhlcwo4fG5lcnV0aGVz).
 
 ## Data Format
 
@@ -18,6 +18,16 @@ EntryClassId    | Name
 5               | GitHub
 6               | Twitter
 7               | Facebook
+8               | Keybase
+-               | // Items below are not implemented
+9               | Instagram
+10              | Dribbble
+11              | Behance
+12              | Bitcoin
+13              | Ethereum
+14              | EOS
+15              | Arweave
+16              |
 
 ### EntryItem
 
