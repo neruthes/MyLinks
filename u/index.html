@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>MyLinks.one</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script type="text/javascript" src="/js/applib.js"></script>
+</head>
+<body>
+    <div class="world">
+        <div class="cont">
+            <div class="grand-header" style="padding: 60px 0 30px;">
+                <div class="block-constraint">
+                    <div class="padless">
+                        <h1 style="height: 1px; overflow: hidden;">MyLinks.one</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grand-body">
+                <div class="block-constraint">
+                    <style media="screen">
+                    .mycard {
+                        background: #FFF;
+                        box-shadow: rgba(0, 0, 0, 0.06) 0 3px 24px 1px;
+                        border: 1px solid rgba(0, 0, 0, 0.04);
+                        border-radius: 7px;
+                        padding: 30px 20px;
+                        margin: 0 0 30px;
+                    }
+                    .mycard h3 {
+                        /* padding: 0px 0 0; */
+                    }
+                    </style>
+                    <div id="js-mycard-1" class="mycard">
+                        <div class="">
+                            <style media="screen">
+                            .avatar {
+                                width: 80%;
+                                max-width: 140px;
+                                margin: 20px auto 15px;
+                            }
+                            .avatar-img {
+                                display: block;
+                                width: 100%;
+                            }
+                            #js-Name {
+                                font-size: 34px;
+                                font-weight: 500;
+                                text-align: center;
+                            }
+                            </style>
+                            <div class="avatar">
+                                <img class="avatar-img" id="js-AvatarImg">
+                            </div>
+                            <div class="name" id="js-Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="js-mycard-2" class="mycard">
+                        <div class="">
+                            <style media="screen">
+                            #js-mycard-2 {
+                                font-size: 18px;
+                            }
+                            .item {
+                                padding: 5px 0;
+                            }
+                            .item--label, .item--content {
+                                display: inline-block;
+                            }
+                            .item--label {
+                                width: 35%;
+                            }
+                            .item--content {
+                                width: 63%;
+                            }
+                            </style>
+                            <div id="js-ListOfEntries" style="max-width: 500px; margin: 0 auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+            var MyProfilePkg = parsedQueryParam.i;
+            var realProfileData = app.DataClass.ProfilePkg.parse(MyProfilePkg);
+            console.log(realProfileData);
+
+            // Render
+            (function () {
+                document.querySelector('#js-Name').innerHTML = realProfileData.ProfileMeta.name;
+                realProfileData.ProfileMeta.avatarUrl && (function () { document.querySelector('#js-AvatarImg').src = realProfileData.ProfileMeta.avatarUrl; })();
+                document.querySelector('#js-ListOfEntries').innerHTML = realProfileData.EntryList.map(function (EntryItem) {
+                    return `<div class="item">
+                        <div class="item--label">
+                            ${EntryItem.n}
+                        </div>
+                        <div class="item--content">
+                            <a href="${EntryItem.href}">${EntryItem.text}</a>
+                        </div>
+                    </div>`;
+                }).join('');
+            })();
+            </script>
+            <script type="text/javascript">
+            // Helpers
+            var editProfile = function (str) {
+                var str = prompt('Edit the profile here', app.util.Base64url_decode(MyProfilePkg));
+                if (str === null) {
+                    return 0;
+                };
+                location.href = '?i=' + app.util.Base64url_encode(str);
+                alert('Remember to use the updated link!');
+            }
+            </script>
+
+            <div class="grand-footer">
+                <div class="block-constraint">
+                    <div class="padless">
+                        <p><span style="cursor: pointer;" onclick="editProfile()">Edit Profile</span></p>
+                        <p>Project MyLinks © 2020<script>
+                        document.write(
+                            ((new Date()).getFullYear() === 2020) ? '' : ('-' + (new Date()).getFullYear())
+                        );
+                        </script> Neruthes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
