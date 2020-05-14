@@ -118,3 +118,9 @@ Encode the ProfileMain payload with Base64url encoding, without padding characte
 #### Structure
 
 https://mylinks.one/u/?i=${ProfilePkg}
+
+## Copyright
+
+Copyright © 2020 Neruthes  [neruthes.xyz](https://neruthes.xyz)
+
+Published under GNU AGPL v3. See `LICENSE.txt` file.
