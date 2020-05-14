@@ -19,7 +19,7 @@ EntryClassId    | Name
 6               | Twitter
 7               | Facebook
 8               | Keybase
--               | // Items below are not implemented
+_               | // Items below are not implemented
 9               | Instagram
 10              | Dribbble
 11              | Behance
