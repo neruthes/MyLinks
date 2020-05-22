@@ -160,6 +160,13 @@ app.DataClass.EntryItem = {
                 text: `@${argv[0]}`,
                 href: `https://keybase.io/${argv[0]}`
             };
+        },
+        '16': function (argv) { // Maskbook Public Key
+            return {
+                n: 'Maskbook Pubkey',
+                text: `<code>${argv[0]}</code>`,
+                href: ''
+            };
         }
     },
     'parse': function (str) {
